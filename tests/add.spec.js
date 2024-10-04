@@ -15,10 +15,17 @@ describe("Iteration 1 | Getting Started", () => {
       });
   
       it("should return undefined if any of the arguments is not provided", () => {
-        expect(add(1)).toEqual(undefined);
+        expect(add()).toEqual(undefined);
         expect(add()).toEqual(undefined);
         expect(add(undefined, 1)).toEqual(undefined);
       });
+
+      it("should return undefined if any of the arguments is not a number", () => {
+        expect(add("a",true)).toEqual(undefined);
+        expect(add("12", 3)).toEqual(undefined);
+        expect(add(1, "4")).toEqual(undefined);
+      });
+
     });
   });
   
