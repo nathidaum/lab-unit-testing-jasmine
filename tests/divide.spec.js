@@ -12,6 +12,7 @@ describe("Iteration 2", () => {
             expect(divide.length).toBe(2);
             expect(divide(1,2)).toBeDefined();
             expect(divide("3", 5)).toBeUndefined();
+            expect(divide(3, "5")).toBeUndefined();
         });
 
         it("should return the division of the two numbers", () => {
